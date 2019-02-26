@@ -1,5 +1,5 @@
 {% set name = "databases" %}
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 005f8c181278282dc89482e1b88a90e4f74427bfe8d4fc219531dd4173af7ed1
+  sha256: b50409c597cc9bbb4c8203ad98361bf5e8b61d8b178c7b8ffaa5e45f3103babd
 
 build:
   number: 0
