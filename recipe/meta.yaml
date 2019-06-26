@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python
-    - sqlalchemy
+    - sqlalchemy >=1.3.0
     - aiocontextvars  # [py<37]
     - asyncpg
     - psycopg2
