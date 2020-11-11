@@ -27,6 +27,7 @@ requirements:
     - aiomysql
     - pymysql
     - aiosqlite
+    - aiopg
 
 test:
   imports:
