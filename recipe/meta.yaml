@@ -23,9 +23,7 @@ requirements:
     - sqlalchemy
     - aiocontextvars  # [py<37]
     - asyncpg
-    - psycopg2
     - aiomysql
-    - pymysql
     - aiosqlite
 
 test:
