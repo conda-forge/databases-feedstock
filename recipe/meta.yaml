@@ -1,5 +1,5 @@
 {% set name = "databases" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 78b758884ca585b81272af1de697e0c8a3034de92bdd08e9ac47436ef0cdca56
+  sha256: 799febb8fc0ad1e9ac47b5510b91e971d35be205aa99b9a00b3811b4cb5e5254
 
 build:
   number: 0
@@ -23,9 +23,7 @@ requirements:
     - sqlalchemy
     - aiocontextvars  # [py<37]
     - asyncpg
-    - psycopg2
     - aiomysql
-    - pymysql
     - aiosqlite
 
 test:
