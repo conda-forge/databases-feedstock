@@ -10,16 +10,16 @@ source:
   sha256: ea2d419d3d2eb80595b7ceb8f282056f080af62efe2fb9bcd83562f93ec4b674
 
 build:
+  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<37]
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
   run:
-    - python
+    - python >=3.7
     - sqlalchemy >=1.4.42,<1.5
 
 test:
