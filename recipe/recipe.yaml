@@ -1,0 +1,51 @@
+schema_version: 1
+
+context:
+  name: databases
+  version: 0.9.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/databases-${{ version }}.tar.gz
+  sha256: d2f259677609bf187737644c95fa41701072e995dfeb8d2882f335795c5b61b0
+
+build:
+  number: 3
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - sqlalchemy >=2.0.7
+
+tests:
+  - python:
+      imports:
+        - databases
+      python_version: ${{ python_min }}.*
+
+about:
+  summary: Async database support for Python.
+  license: BSD-3-Clause
+  license_file: LICENSE.md
+  description: |
+    Databases gives you simple asyncio support for a range of databases.
+
+    It allows you to make queries using the powerful SQLAlchemy Core expression
+    language, and provides support for PostgreSQL, MySQL, and SQLite.
+
+
+  homepage: https://github.com/encode/databases
+
+extra:
+  recipe-maintainers:
+    - carlodri
+    - thewchan
